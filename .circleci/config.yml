@@ -8,8 +8,8 @@ jobs:
   run-tests:
     docker:
       - image: cimg/node:15.1
-        environment:
-          DATABASE_URL: postgres://postgres:jasoncarr@localhost:5432/sdc_reviews
+        # environment:
+        #   DATABASE_URL: postgres://postgres:jasoncarr@localhost:5432/sdc_reviews
 
       - image: circleci/postgres:9.6.5-alpine-ram
         environment:
