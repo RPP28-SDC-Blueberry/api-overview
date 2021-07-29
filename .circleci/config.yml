@@ -13,7 +13,7 @@ jobs:
 
       - image: circleci/postgres:latest
         environment:
-          POSTGRES_USER: postgres
+          POSTGRES_USER: jasoncarr
           POSTGRES_DB: sdc-reviews
           POSTGRES_HOST_AUTH_METHOD: trust
     steps:
