@@ -15,7 +15,7 @@ jobs:
         environment:
         #   POSTGRES_USER: postgres
         #   POSTGRES_DB: sdc-reviews
-          POSTGRES_PASSWORD: ''
+          POSTGRES_HOST_AUTH_METHOD: trust
     steps:
       # Checkout the code as the first step.
       - checkout
