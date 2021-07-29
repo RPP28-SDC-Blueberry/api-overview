@@ -8,6 +8,13 @@ jobs:
   run-tests:
     docker:
       - image: cimg/node:15.1
+          environment:
+            DATABASE_URL: postgres://postgres:jasoncarr@localhost:5432/sdc_reviews
+
+      - image: circleci/postgres:9.6.5-alpine-ram
+          environment:
+            POSTGRES_USER: jasoncarr
+            POSTGRES_DB: sdc-reviews
     steps:
       # Checkout the code as the first step.
       - checkout
@@ -18,7 +25,6 @@ jobs:
       # - node/install-packages:
       #     pkg-manager: yarn
       - run:
-          name: Run tests
           command: npm test
 
 workflows:
