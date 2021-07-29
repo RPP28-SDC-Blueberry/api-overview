@@ -8,13 +8,13 @@ jobs:
   run-tests:
     docker:
       - image: cimg/node:15.1
-        environment:
-          DATABASE_URL: postgres://postgres:jasoncarr@localhost:5432/sdc_reviews
+        # environment:
+        #   DATABASE_URL: postgres://postgres:jasoncarr@localhost:5432/sdc_reviews
 
       - image: circleci/postgres:latest
         environment:
-        #   POSTGRES_USER: postgres
-        #   POSTGRES_DB: sdc-reviews
+          POSTGRES_USER: postgres
+          POSTGRES_DB: sdc-reviews
           POSTGRES_HOST_AUTH_METHOD: trust
     steps:
       # Checkout the code as the first step.
